@@ -9,17 +9,17 @@ searchedNames = 0;
 lineBreak = "\n";
 
 function DPAttunement_Zero()
-	DPA_Name1 = "Boss";
-	DPA_Name2 = "Vice";
+	DPA_Name1 = "Lead";
+	DPA_Name2 = "ROff";
 	DPA_Name3 = "Off";
-	DPA_Name4 = "CO";
-	DPA_Name5 = "OA";
+	DPA_Name4 = "OffA";
+	DPA_Name5 = "Core";
 	DPA_Name6 = "Mem";
 	DPA_Name7 = "Cas";
 	DPA_Name8 = "Alt";
 	DPA_Name9 = "Asp";
 
-	DPA_MC0 = "M C";
+	DPA_MC0 = "MC";
 	DPA_MC1 = 0;
 	DPA_MC2 = 0;
 	DPA_MC3 = 0;
@@ -63,7 +63,7 @@ function DPAttunement_Zero()
 	DPA_BWL8 = 0;
 	DPA_BWL9 = 0;
 
-	DPA_TOT0 = "Tot";
+	DPA_TOT0 = "Total";
 	DPA_TOT1 = 0;
 	DPA_TOT2 = 0;
 	DPA_TOT3 = 0;
@@ -521,3 +521,20 @@ function DPAttunement_CheckButton_OnClick()
 
 	DPAttunement_AttHave:SetText(officerLine2);
 end
+
+function DPAttunement_LoadTarget_OnClick()
+	local name = UnitName("target")
+	if name then
+		DPAttunement_InputText:SetText(tostring(name))
+		--DPAttunement_Load_OnClick()
+	end
+end
+
+function DPAttunement_LoadWhisper_OnClick()
+	local name = ChatEdit_GetLastTellTarget(ChatFrameEditBox) ~= '' and ChatEdit_GetLastTellTarget(ChatFrameEditBox)
+	if name then
+		DPAttunement_InputText:SetText(tostring(name))
+		--DPAttunement_Load_OnClick()
+	end
+end
+

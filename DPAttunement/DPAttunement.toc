@@ -1,5 +1,6 @@
-## Interface: 30300
+## Interface: 11200
 ## Title: DPAttunement
-## Author: Shadarak - De Profundis
+## Author: Shadarak - De Profundis  / edit by |cff02bf02Luise|r
+## Version: 1.0.1
 ## Notes: De Profundis Attunement Stats
 DPAttunement.xml

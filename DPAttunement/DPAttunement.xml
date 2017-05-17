@@ -285,7 +285,7 @@ C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
 
       <Anchors>
         <Anchor point="TOPLEFT">
-          <Offset x="255" y="-108"/>
+          <Offset x="300" y="-108"/>
 
         </Anchor>
       </Anchors>
@@ -295,7 +295,59 @@ C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
         </OnClick>
       </Scripts>
     </Button>
+	
+    <Button name="DPAttunement_LoadTarget" inherits="GameMenuButtonTemplate" text="T">
+      <Size x="20" y="25"/>
 
+      <Anchors>
+        <Anchor point="TOPLEFT">
+          <Offset x="240" y="-108"/>
+
+        </Anchor>
+      </Anchors>
+      <Scripts>
+        <OnClick>
+          DPAttunement_LoadTarget_OnClick();
+        </OnClick>
+        <OnEnter>
+			GameTooltip:Hide();
+			GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
+			GameTooltip:SetText("Get name from target");
+			GameTooltip:Show();
+        </OnEnter>		
+        <OnLeave>
+			GameTooltip:ClearLines();
+			GameTooltip:Hide();
+        </OnLeave>		
+      </Scripts>
+    </Button>
+
+    <Button name="DPAttunement_LoadWhisper" inherits="GameMenuButtonTemplate" text="W">
+      <Size x="20" y="25"/>
+
+      <Anchors>
+        <Anchor point="TOPLEFT">
+          <Offset x="265" y="-108"/>
+
+        </Anchor>
+      </Anchors>
+      <Scripts>
+        <OnClick>
+          DPAttunement_LoadWhisper_OnClick();
+        </OnClick>
+        <OnEnter>
+			GameTooltip:Hide();
+			GameTooltip:SetOwner(this, "ANCHOR_TOPLEFT");
+			GameTooltip:SetText("Get name from last received whisper");
+			GameTooltip:Show();
+        </OnEnter>		
+        <OnLeave>
+			GameTooltip:ClearLines();
+			GameTooltip:Hide();
+        </OnLeave>		
+      </Scripts>
+    </Button>
+	
     <CheckButton name="DPAttunement_MC_Check" inherits="UICheckButtonTemplate">
       <Size> <AbsDimension x="20" y="20"/> </Size>
       <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="35" y="-165"/> </Offset> </Anchor> </Anchors>
