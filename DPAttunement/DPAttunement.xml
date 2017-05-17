@@ -1,0 +1,359 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
+<Script file="DPAttunement.lua" />
+<Font name="DPA_GameFontWhite" inherits="GameFontNormal" justifyH="CENTER" virtual="true">
+		<Color r="1.0" g="1.0" b="1.0"/>
+</Font>
+<Font name="DPA_GameFontWhiteL" inherits="GameFontNormal" justifyH="LEFT" virtual="true">
+		<Color r="1.0" g="1.0" b="1.0"/>
+</Font>
+
+<Frame name="DPAttunementFrame" frameStrata="HIGH" toplevel="true" enableMouse="true" movable="true" parent="UIParent">
+  <Size>
+    <AbsDimension x="380" y="195"/>
+  </Size>
+  <Anchors>
+    <Anchor point="CENTER"/>
+  </Anchors>
+
+  <Backdrop name="$parentBackdrop" bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+    <EdgeSize>
+      <AbsValue val="16"/>
+    </EdgeSize>
+    <TileSize>
+      <AbsValue val="32"/>
+    </TileSize>
+    <BackgroundInsets>
+      <AbsInset left="5" right="5" top="5" bottom="5"/>
+    </BackgroundInsets>
+  </Backdrop>
+
+  <Layers>
+    <Layer level="TITLE">
+
+      <FontString name="DPAttunement_TitleText" inherits="GameFontNormal" wraponspaces="true">
+        <Size> <AbsDimension x="300" y="12"/> </Size>
+        <Anchors> <Anchor point="TOP"> <Offset> <AbsDimension x="0" y="-10"/> </Offset> </Anchor> </Anchors> </FontString>
+
+      <FontString name="DPAttunement_Name1" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="45" y="-25"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_Name2" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="80" y="-25"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_Name3" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="115" y="-25"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_Name4" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="150" y="-25"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_Name5" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="185" y="-25"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_Name6" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="220" y="-25"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_Name7" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="255" y="-25"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_Name8" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="290" y="-25"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_Name9" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="325" y="-25"/> </Offset> </Anchor> </Anchors> </FontString>
+
+      <FontString name="DPAttunement_MC" inherits="DPA_GameFontWhiteL" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="5" y="-40"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_MC1" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="45" y="-40"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_MC2" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="80" y="-40"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_MC3" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="115" y="-40"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_MC4" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="150" y="-40"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_MC5" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="185" y="-40"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_MC6" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="220" y="-40"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_MC7" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="255" y="-40"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_MC8" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="290" y="-40"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_MC9" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="325" y="-40"/> </Offset> </Anchor> </Anchors> </FontString>
+
+      <FontString name="DPAttunement_ONY" inherits="DPA_GameFontWhiteL" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="5" y="-53"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_ONY1" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="45" y="-53"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_ONY2" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="80" y="-53"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_ONY3" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="115" y="-53"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_ONY4" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="150" y="-53"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_ONY5" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="185" y="-53"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_ONY6" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="220" y="-53"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_ONY7" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="255" y="-53"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_ONY8" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="290" y="-53"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_ONY9" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="325" y="-53"/> </Offset> </Anchor> </Anchors> </FontString>
+
+      <FontString name="DPAttunement_NAX" inherits="DPA_GameFontWhiteL" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="5" y="-79"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_NAX1" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="45" y="-79"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_NAX2" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="80" y="-79"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_NAX3" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="115" y="-79"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_NAX4" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="150" y="-79"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_NAX5" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="185" y="-79"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_NAX6" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="220" y="-79"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_NAX7" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="255" y="-79"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_NAX8" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="290" y="-79"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_NAX9" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="325" y="-79"/> </Offset> </Anchor> </Anchors> </FontString>
+		
+	  <FontString name="DPAttunement_BWL" inherits="DPA_GameFontWhiteL" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="5" y="-66"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_BWL1" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="45" y="-66"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_BWL2" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="80" y="-66"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_BWL3" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="115" y="-66"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_BWL4" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="150" y="-66"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_BWL5" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="185" y="-66"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_BWL6" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="220" y="-66"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_BWL7" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="255" y="-66"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_BWL8" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="290" y="-66"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_BWL9" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="325" y="-66"/> </Offset> </Anchor> </Anchors> </FontString>
+
+      <FontString name="DPAttunement_TOT" inherits="DPA_GameFontWhiteL" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="5" y="-92"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_TOT1" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="45" y="-92"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_TOT2" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="80" y="-92"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_TOT3" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="115" y="-92"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_TOT4" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="150" y="-92"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_TOT5" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="185" y="-92"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_TOT6" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="220" y="-92"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_TOT7" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="255" y="-92"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_TOT8" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="290" y="-92"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_TOT9" inherits="DPA_GameFontWhite" wraponspaces="true">
+        <Size> <AbsDimension x="40" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="325" y="-92"/> </Offset> </Anchor> </Anchors> </FontString>
+
+      <FontString name="DPAttunement_Name" inherits="DPA_GameFontWhiteL" wraponspaces="true" text="Player Name">
+        <Size> <AbsDimension x="90" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="5" y="-113"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_Number" inherits="DPA_GameFontWhiteL" wraponspaces="true" text="000">
+        <Size> <AbsDimension x="30" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="220" y="-113"/> </Offset> </Anchor> </Anchors> </FontString>
+
+      <FontString name="DPAttunement_EPGPLine" inherits="DPA_GameFontWhiteL" wraponspaces="true" text="EPGP Points">
+        <Size> <AbsDimension x="90" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="5" y="-133"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_EPGPPts" inherits="DPA_GameFontWhiteL" wraponspaces="true" text="1000/1000">
+        <Size> <AbsDimension x="190" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="105" y="-133"/> </Offset> </Anchor> </Anchors> </FontString>
+
+      <FontString name="DPAttunement_AttLine" inherits="DPA_GameFontWhiteL" wraponspaces="true" text="Attunements">
+        <Size> <AbsDimension x="90" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="5" y="-148"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_AttHave" inherits="DPA_GameFontWhiteL" wraponspaces="true" text="+MC +Ony +Naxx +Other">
+        <Size> <AbsDimension x="290" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="105" y="-148"/> </Offset> </Anchor> </Anchors> </FontString>
+
+      <FontString name="DPAttunement_MC" inherits="DPA_GameFontWhiteL" wraponspaces="true" text="MC:">
+        <Size> <AbsDimension x="50" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="10" y="-167"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_ONY" inherits="DPA_GameFontWhiteL" wraponspaces="true" text="ONY:">
+        <Size> <AbsDimension x="50" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="60" y="-167"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_NAXX" inherits="DPA_GameFontWhiteL" wraponspaces="true" text="NAXX:">
+        <Size> <AbsDimension x="50" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="175" y="-167"/> </Offset> </Anchor> </Anchors> </FontString>
+      <FontString name="DPAttunement_EPGP" inherits="DPA_GameFontWhiteL" wraponspaces="true" text="EPGP:">
+        <Size> <AbsDimension x="50" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="245" y="-167"/> </Offset> </Anchor> </Anchors> </FontString>
+	  <FontString name="DPAttunement_EPGP" inherits="DPA_GameFontWhiteL" wraponspaces="true" text="BWL:">
+        <Size> <AbsDimension x="50" y="12"/> </Size>
+        <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="120" y="-167"/> </Offset> </Anchor> </Anchors> </FontString>
+
+
+    </Layer>
+  </Layers>
+
+  <Frames>
+    <Button name="$parentClose" inherits="UIPanelCloseButton">
+      <Anchors>
+        <Anchor point="TOPRIGHT">
+          <Offset x="-1" y="-1"/>
+
+        </Anchor>
+      </Anchors>
+    </Button>
+
+    <EditBox name="DPAttunement_InputText" inherits="InputBoxTemplate" autoFocus="false">
+      <Size>
+        <AbsDimension x="115" y="16"/>
+      </Size>
+      <Anchors>
+        <Anchor point="TOPLEFT">
+          <Offset x="100" y="-113"/>
+        </Anchor>
+      </Anchors>
+    </EditBox>
+
+    <Button name="DPAttunement_Load" inherits="GameMenuButtonTemplate" text="Load">
+      <Size x="60" y="25"/>
+
+      <Anchors>
+        <Anchor point="TOPLEFT">
+          <Offset x="255" y="-108"/>
+
+        </Anchor>
+      </Anchors>
+      <Scripts>
+        <OnClick>
+          DPAttunement_Load_OnClick();
+        </OnClick>
+      </Scripts>
+    </Button>
+
+    <CheckButton name="DPAttunement_MC_Check" inherits="UICheckButtonTemplate">
+      <Size> <AbsDimension x="20" y="20"/> </Size>
+      <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="35" y="-165"/> </Offset> </Anchor> </Anchors>
+      <Scripts> <OnClick> DPAttunement_CheckButton_OnClick(); </OnClick> </Scripts> </CheckButton>
+    <CheckButton name="DPAttunement_ONY_Check" inherits="UICheckButtonTemplate">
+      <Size> <AbsDimension x="20" y="20"/> </Size>
+      <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="100" y="-165"/> </Offset> </Anchor> </Anchors>
+      <Scripts> <OnClick> DPAttunement_CheckButton_OnClick(); </OnClick> </Scripts> </CheckButton>
+    <CheckButton name="DPAttunement_NAXX_Check" inherits="UICheckButtonTemplate">
+      <Size> <AbsDimension x="20" y="20"/> </Size>
+      <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="220" y="-165"/> </Offset> </Anchor> </Anchors>
+      <Scripts> <OnClick> DPAttunement_CheckButton_OnClick(); </OnClick> </Scripts> </CheckButton>
+    <CheckButton name="DPAttunement_EPGP_Check" inherits="UICheckButtonTemplate">
+      <Size> <AbsDimension x="20" y="20"/> </Size>
+      <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="280" y="-165"/> </Offset> </Anchor> </Anchors>
+      <Scripts> <OnClick> DPAttunement_CheckButton_OnClick(); </OnClick> </Scripts> </CheckButton>
+	<CheckButton name="DPAttunement_BWL_Check" inherits="UICheckButtonTemplate">
+      <Size> <AbsDimension x="20" y="20"/> </Size>
+      <Anchors> <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="155" y="-165"/> </Offset> </Anchor> </Anchors>
+      <Scripts> <OnClick> DPAttunement_CheckButton_OnClick(); </OnClick> </Scripts> </CheckButton>
+
+
+    <Button name="DPAttunement_Set" inherits="GameMenuButtonTemplate" text="Set">
+      <Size x="60" y="25"/>
+
+      <Anchors>
+        <Anchor point="BOTTOMLEFT">
+          <Offset x="310" y="10"/>
+
+        </Anchor>
+      </Anchors>
+      <Scripts>
+        <OnClick>
+          DPAttunement_Set_OnClick();
+        </OnClick>
+      </Scripts>
+    </Button>
+
+  </Frames>
+
+  <Scripts>
+    <OnLoad>
+      DPAttunement_OnLoad();
+    </OnLoad>
+
+    <OnDragStart>
+      DPAttunement_OnDragStart();
+    </OnDragStart>
+
+    <OnDragStop>
+      DPAttunement_OnDragStop();
+    </OnDragStop>
+
+    <OnMouseUp>
+      DPAttunement_OnDragStop();
+    </OnMouseUp>
+
+  </Scripts>
+</Frame>
+</Ui>
+
